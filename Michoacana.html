@@ -1,114 +1,482 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Michoacana</title>
-        <link rel="stylesheet" href="estilo.css">
-        <link href="https://fontsgeek.com/fonts/Britannic-Bold-Regular" rel="stylesheet">
-        <link href="https://fontsgeek.com/search/?q=lora" rel="stylesheet">
-    </head>
-    <body>
-      <section id="inic"></section>
-        <div class="encab">
-        <img src="img/banner.png" class="banner">
-        <nav class="barra">
-            <img src="img/logo.png" class="logo">
-            <ul>
-                <li><a href="#inic">INICIO</a></li>
-                <li><a href="#ad">ACERCA DE</a></li>
-                <li><a href="#prod">PRODUCTOS</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
-            </ul>
-        </nav> 
-        </div>
-        <section id="ad"></section>
-        <div class="mvv">
-            <div class="tarjetas">
-                <div class="iz">
-                    <img src="img/1.png" alt="" class="a1">
-                    <img src="img/1m.png" alt="" class="b1">
-                </div>
-                <div class="cen">
-                    <img src="img/2.png" alt="" class="a2">
-                    <img src="img/2m.png" alt="" class="b2">
-                </div>
-                <div class="der">
-                    <img src="img/3.png" alt="" class="a3">
-                    <img src="img/3m.png" alt="" class="b3">
-                </div>
-            <div class="liston"></div>
-            </div>
-            <div class="fondo">
-            <img src="img/fondo1.png" class="patron">
-            </div>
-            <div class="videos">
-              <a href="https://youtube.com/shorts/en6ZWgRcxBg?si=5x3FjHca7DtLLWqu"><div class="viz">
-              <div class="vizyt"><img src="img/yt.png" alt=""class="yt"></div></div></a>
-              <a href="https://youtube.com/shorts/9sS4pEbWXys?feature=share"><div class="vder">
-              <div class="vderyt"><img src="img/yt.png" alt=""class="yt"></div></div></a>
-              <div class="texto">
-                <p>Conoce más sobre nuestro proceso, nuestros sabores y lo que hace especial a La Michoacana. Aquí podrás disfrutar los videos que preparamos para ti.</p>
-              </div>
-            </div>
-        </div>
-        <section id="prod"></section>
-          <div class="sbrs">
-            <div class="titulosabores">
-              <h1 class="ts">Sabores</h1>
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
 
-            </div>
-            <img src="img/HeroTight01.webp" alt="" class="ft">
-            <img src="img/HeroTight02.webp" alt="" class="ft">
-            <img src="img/HeroTight03.webp" alt="" class="ft">
-            <img src="img/HeroTight04.webp" alt="" class="ft">
-            <img src="img/HeroTight05.webp" alt="" class="ft">
-            <img src="img/HeroTight06.webp" alt="" class="ft">
-            <img src="img/HeroTight07.webp" alt="" class="ft">
-            <img src="img/HeroTight08.webp" alt="" class="ft">
-            <img src="img/HeroTight09.webp" alt="" class="ft">
-            <img src="img/HeroTight10.webp" alt="" class="ft">
-          </div>
-          <div class="encuesta">
-          <h1 class="participa">Participa en nuestra encuesta</h1>
-          <p>¡Tu opinión es muy importante para nosotros! Queremos seguir mejorando y<br> ofreciendo los sabores que más te gustan. Por eso, te invitamos a responder<br> una breve encuesta:</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8nS0SBjL8TPHb_WTVAve7Lu2UETHOier_3tWfGWU1y25OVw/viewform?usp=dialog"><div class="enlace">
-                <h1 class="enc">¡Vamos!</h1>
-              </div></a>
-        </div>
+body{
+  
+  max-width: 800px;
+  width: 100%;
+}
 
-        <section class="contact-section" id="contacto">
-  <h2>Contáctanos</h2>
-  <p>¿Tienes dudas, sugerencias o comentarios? ¡Nos encantará escucharte!</p>
+.barra{
+    display: flex;
+    text-align: center;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.495), transparent);
+    width: 1920px;
+    z-index: 99;
+}
 
-  <form class="contact-form">
-    <div class="form-group">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-    </div>
+.barra ul{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-    <div class="form-group">
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="tuemail@ejemplo.com" required>
-    </div>
+.encab{
+    height: 624px;
+    width: 1920px;
+}
+li{
+    list-style-type: none;
+    height: 20px;
+    border-radius: 7px;
+}
 
-    <div class="form-group">
-      <label for="ciudad">Ciudad</label>
-      <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad">
-    </div>
+li:hover{
+    background-color: rgba(255, 255, 255, 0.255);
+}
 
-    <div class="form-group">
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-    </div>
+a{
+    text-decoration: none;
+    color: white;
+}
 
-    <button type="submit" class="btn-enviar">Enviar mensaje</button>
-  </form>
-  <div class="pt">
-  <img src="img/fondo3.png" alt="" class="ptfoto"></div>
-</section>
-<footer>
-  <p>Página realizada con fines educativos. Todos los derechos reservados.</p>
-</footer>
-    </body>
-    </html>
+.banner{
+    z-index: -10;
+}
+
+.logo{
+    height: 35px;
+    margin: 10px;
+}
+
+.mvv{
+    height: 1599px;
+    padding: 0;
+    width: 1920px;
+    position: relative;
+    display: flex;
+}
+
+.fondo{
+    background-color: rgb(233, 190, 208);
+    height: 1599px;
+    position: absolute;
+    width: 1920px;
+    z-index: -2;
+}
+.patron{
+    position: absolute;
+    width: 1920px;
+}
+
+.liston{
+    height: 382px;
+    background-color: #ea1488;
+    position: absolute;
+    width: 1920px;
+    margin-top: 160px;
+    z-index: -1;
+    align-items: center;
+    align-content: center;
+    left: 0px;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 85px;
+    margin-top: 160px;
+    height: 888px;
+    width: 1920px;
+}
+
+.videos{
+  margin-top: 1000px;
+  display: flex;
+  gap: 30px;
+  width: 1920px;
+  height: 472px;
+  position: absolute;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.vder{
+  background-image: url(img/b.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 472px;
+  width: 854px;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+}
+
+.viz{
+  background-image: url(img/a.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 472px;
+  width: 854px;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+}
+
+.vizyt{
+  position: absolute;
+  left: 150px;
+}
+
+.vderyt{
+  position: absolute;
+  left: 150px;
+}
+
+.yt{
+  transform: scale(0.5);
+  z-index: 99;
+  transition: transform 0.2s ease-in-out;
+}
+
+.viz:hover{
+  transform: scale(1.02);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.492));
+}
+
+.viz:hover .yt{
+  transform: scale(0.55);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.397));
+}
+
+.vder:hover{
+  transform: scale(1.02);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.492));
+}
+
+.vder:hover .yt{
+  transform: scale(0.55);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.397));
+}
+
+
+.vder:hover{
+  transform: scale(1.02);
+}
+
+.texto{
+  position: absolute;
+  margin-top: 600px;
+  color: #d33c71;
+  font-size: 30px;
+  font-family: "Britannic";
+  width: 1600px;
+  text-align: center;
+}
+.sbrs{
+  height: 910px;
+  width: 1920px;
+  background: linear-gradient(#ea1488,#570833);
+  display: flex;
+  width: 1920px;
+  z-index: -1;
+}
+
+.encuesta{
+  height: 727px;
+  width: 1920px;
+  background-color: #ea1488;
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
+    box-shadow: 0px -8px 20px rgba(0, 0, 0, 0.638);
+    text-align: center;
+}
+
+.participa{
+  padding-top: 100px;
+  font-size: 90px;
+  font-family: "Britannic";
+  color: white;
+
+}
+
+.encuesta p{
+  color: white;
+  font-family: "Britannic";
+  font-size: 35px;
+  font-family: "Lora";
+  margin-top: 30px;
+}
+
+.enlace{
+  background-image: url(img/fondo2.png);
+  width: 1300px;
+  height: 80px;
+  margin-left: 300px;
+  margin-top: 80px;
+  align-content: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.enlace::after{
+  content: "";
+  background-color: rgba(255, 255, 255, 0.362);
+  width: 1300px;
+  height: 80px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 20px;
+}
+
+.enlace:hover::after{
+  opacity: 1;
+}
+
+.enc{
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
+  font-family: "Britannic";
+  margin-top: -10px;
+}
+
+.tits{
+  color: white;
+  margin-top: 30px;
+  background-color: #570833;
+  height: 50px;
+  width: 1920px;
+}
+
+.ft{
+  margin-top: 400px;
+  transform: rotate(9deg);
+  height: 750px;
+  position: relative;
+  margin-left: -90px;
+  left: 70px;
+  transition: margin-top 0.3s ease-in-out;
+}
+
+.ft:hover{
+  margin-top: 200px;
+}
+
+.iz:hover,
+.der:hover,
+.cen:hover{
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.iz,
+.der,
+.cen{
+  align-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.b1,
+.b2,
+.b3{
+  position: absolute;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out
+}
+
+.b1:hover,
+.b2:hover,
+.b3:hover{
+  opacity: 1;
+}
+
+
+.pt{
+  position: absolute;
+  width: 1920px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 830px;;
+}
+.ptfoto{
+  width: 100%;
+  height: 100%;
+}
+
+.contact-section {
+  background-color: #ea1488;
+  padding: 60px 0px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  position: relative;
+  height: 700px;
+  width: 1920px;
+}
+
+.contact-section h2 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: "Britannic";
+}
+
+.contact-section p {
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-family: "Lora";
+}
+
+.contact-form {
+  z-index: 2;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffe0e9;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  justify-items: center;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #5a2d1f;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 550px;
+  padding: 10px 12px;
+  border: 2px solid #f5a3bc;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ea1488;
+}
+
+.btn-enviar {
+  display: inline-block;
+  background-color: #ea1488;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #d33c71;
+}
+
+footer{
+  color: white;
+  background-color: #570833;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  width: 1920px;
+  box-shadow:0px -8px 20px rgba(0, 0, 0, 0.247);
+}
+
+footer p{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.titulosabores{
+  position: absolute;
+  width: 1920px;
+  height: 70px;
+  margin-top: 50px;
+}
+
+.ts{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+
+.sn{
+  display: flex;
+  color: white;
+  font-family: "Britannic";
+  font-size: 30px;
+  margin-top: 80px;
+  opacity: 0;
+}
+
+.sn2{
+  display: flex;
+  color: white;
+  font-family: "Britannic";
+  font-size: 30px;
+  margin-top: -60px;
+}
+
+.sn div{
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.snli{
+  margin-left: 400px;
+}
+
+.snmg{
+  margin-left: -100px;
+}
+
+.snf{
+  margin-left: -150px;
+}
+
+.sngcc{
+  margin-left: -100px;
+}
+
+.sngcc{
+  margin-left: 400px;
+}
+
+.sncc{
+  margin-left: 60px;
+}
+
+.snfcc{
+  margin-left: -100px;
+}
